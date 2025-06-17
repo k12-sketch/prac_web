@@ -1,10 +1,5 @@
-<!--
-  이 HTML 파일은 피자 클래스(Neapolitan Pizza) 홍보를 위한 랜딩 페이지입니다.
-  TailwindCSS와 구글 폰트를 사용하며, 주요 섹션은 헤더, 메인 컨텐츠, 후기, 푸터로 구성되어 있습니다.
--->
 <html>
   <head>
-    <!-- 구글 폰트 사전 연결 및 비동기 로딩 -->
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
@@ -12,34 +7,29 @@
       onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Serif%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
     />
-    <!-- 페이지 타이틀 및 파비콘 -->
-    <title>Pizza_world</title>
+
+    <title>Stitch Design</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-    <!-- TailwindCSS CDN 및 플러그인 적용 -->
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-neutral-50 group/design-root overflow-x-hidden" style='font-family: "Noto Serif", "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <!-- 헤더: 로고, 네비게이션, 예약 버튼 -->
         <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#ededed] px-10 py-3">
           <div class="flex items-center gap-4 text-[#141414]">
             <div class="size-4">
-              <!-- 로고 SVG 아이콘 -->
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
             </div>
-            <!-- 사이트 이름 -->
             <h2 class="text-[#141414] text-lg font-bold leading-tight tracking-[-0.015em]">Pizza Elite</h2>
           </div>
           <div class="flex flex-1 justify-end gap-8">
             <div class="flex items-center gap-9">
-              <!-- 네비게이션 메뉴(About, Classes, Reviews, Contact) -->
               <a class="text-[#141414] text-sm font-medium leading-normal" href="#">About</a>
               <a class="text-[#141414] text-sm font-medium leading-normal" href="#">Classes</a>
               <a class="text-[#141414] text-sm font-medium leading-normal" href="#">Reviews</a>
               <a class="text-[#141414] text-sm font-medium leading-normal" href="#">Contact</a>
             </div>
-            <!-- 상단 예약 버튼 -->
             <button
               class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-black text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em]"
             >
@@ -51,24 +41,20 @@
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="@container">
               <div class="@[480px]:p-4">
-                <!-- 메인 배너: 배경 이미지, 타이틀, 부제목, 예약 버튼 -->
                 <div
                   class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
                   style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA86aE8HAd-nv7vweugHIhKeD4UA-jWjIoQAKSODoJh0uwsxvfLc147uYBDsTSBHnSHWMdpo2lEUFgq_a0v2s96xx1Tl4aIISKUrPApf4eU5w_ZS1vlta5OPdvSdZ0QX4GsZs__93REWA9QRwZmyO6jqdFuFzQswqrg6ysXk9-Y2efxDjC5FGEoYIT_bhoRXRM8EqLY9ANrSSkBj9Cx1PwURwAyzJfLyxBDq0aV5A6qxvnl4xCi80CCBLY7xpNf7NRwS54h_Hm45d4");'
                 >
                   <div class="flex flex-col gap-2 text-center">
-                    <!-- 메인 타이틀 -->
                     <h1
                       class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
                     >
                       Master the Art of Neapolitan Pizza
                     </h1>
-                    <!-- 부제목 -->
                     <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
                       Join our exclusive, yearly cooking class in Naples and learn the secrets of authentic homemade pizza from a renowned chef.
                     </h2>
                   </div>
-                  <!-- 메인 예약 버튼 -->
                   <button
                     class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-black text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
                   >
@@ -77,12 +63,9 @@
                 </div>
               </div>
             </div>
-            <!-- 수업에서 배우는 내용 섹션 -->
             <h2 class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">What You'll Learn</h2>
             <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <!-- 도우 완성 카드 -->
               <div class="flex flex-1 gap-3 rounded-lg border border-[#dbdbdb] bg-neutral-50 p-4 flex-col">
-                <!-- 피자 아이콘 -->
                 <div class="text-[#141414]" data-icon="Pizza" data-size="24px" data-weight="regular">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                     <path
@@ -91,17 +74,13 @@
                   </svg>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <!-- 카드 제목 -->
                   <h2 class="text-[#141414] text-base font-bold leading-tight">Dough Perfection</h2>
-                  <!-- 카드 설명 -->
                   <p class="text-neutral-500 text-sm font-normal leading-normal">
                     Learn to craft the perfect Neapolitan dough, achieving the ideal balance of elasticity and flavor.
                   </p>
                 </div>
               </div>
-              <!-- 오븐 마스터 카드 -->
               <div class="flex flex-1 gap-3 rounded-lg border border-[#dbdbdb] bg-neutral-50 p-4 flex-col">
-                <!-- 오븐 아이콘 -->
                 <div class="text-[#141414]" data-icon="CookingPot" data-size="24px" data-weight="regular">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                     <path
@@ -116,9 +95,7 @@
                   </p>
                 </div>
               </div>
-              <!-- 토핑 비법 카드 -->
               <div class="flex flex-1 gap-3 rounded-lg border border-[#dbdbdb] bg-neutral-50 p-4 flex-col">
-                <!-- 야구모자(토핑) 아이콘 -->
                 <div class="text-[#141414]" data-icon="BaseballCap" data-size="24px" data-weight="regular">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                     <path
@@ -134,31 +111,26 @@
                 </div>
               </div>
             </div>
-            <!-- 나폴리 피자의 역사 섹션 -->
             <h2 class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">The History of Neapolitan Pizza</h2>
             <p class="text-[#141414] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              <!-- 나폴리 피자의 역사 설명 텍스트 -->
-              나폴리 피자 맛있어요 굳굳 추천합니다. 나폴리 장인 김 나폴리
+              Neapolitan pizza, a culinary icon originating from Naples, Italy, boasts a rich history dating back to the 18th century. Initially a street food for the city's poor,
+              it gained popularity with the addition of tomatoes, a New World import. By the 19th century, it had evolved into the Margherita pizza, honoring Queen Margherita of
+              Savoy with its colors representing the Italian flag: red (tomato), white (mozzarella), and green (basil). Today, Neapolitan pizza is celebrated globally for its
+              simplicity, fresh ingredients, and traditional preparation methods, recognized by UNESCO as an intangible cultural heritage.
             </p>
-            <!-- 후기(테스트모니얼) 섹션 -->
             <h2 class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Testimonials</h2>
             <div class="flex flex-col gap-8 overflow-x-hidden bg-neutral-50 p-4">
-              <!-- 후기 카드 반복: 프로필, 별점, 후기, 좋아요/싫어요 버튼 -->
               <div class="flex flex-col gap-3 bg-neutral-50">
                 <div class="flex items-center gap-3">
-                  <!-- 프로필 이미지 -->
                   <div
                     class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
                     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB11eg6_Y8zn4rUAQI33WvYLOMYiwnXqomSbdoL-qI7JC1TX6wCD04pAjNdTWs-odDAFhPH8vB3Kg_J9EBdN54j_Zec3EwgN-w7xktwcxjeT_OLTAYOVw6UfpoUt2H3q_GFGuD1GyDTO7LZlVvVCtfIpFkrTBnsD0izffOEDRIH2lDmrHCj5-MlTb1vR-itnxGTBEkBaDLQi62ozLKmck-_8L0sJFqW-49K3hgaqg1EWSnpRDLOwZCGd5bMAc-Zt_HTUre7P0TUZCc");'
                   ></div>
                   <div class="flex-1">
-                    <!-- 후기 작성자 이름 -->
                     <p class="text-[#141414] text-base font-medium leading-normal">Sophia</p>
-                    <!-- 후기 작성일 -->
                     <p class="text-neutral-500 text-sm font-normal leading-normal">May 15, 2023</p>
                   </div>
                 </div>
-                <!-- 별점 아이콘 5개 -->
                 <div class="flex gap-0.5">
                   <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
@@ -167,35 +139,40 @@
                       ></path>
                     </svg>
                   </div>
-                  <!-- (별점 4개 더 반복) -->
                   <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
                     </svg>
                   </div>
                   <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
                     </svg>
                   </div>
                   <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
                     </svg>
                   </div>
                   <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
                     </svg>
                   </div>
                 </div>
-                <!-- 후기 텍스트 -->
                 <p class="text-[#141414] text-base font-normal leading-normal">
                   This class was an incredible experience! Chef Marco's passion for pizza making is contagious, and I learned so much about the art of Neapolitan pizza. Highly
                   recommend!
                 </p>
                 <div class="flex gap-9 text-neutral-500">
-                  <!-- 좋아요 버튼 -->
                   <button class="flex items-center gap-2">
                     <div class="text-inherit" data-icon="ThumbsUp" data-size="20px" data-weight="regular">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
@@ -206,7 +183,6 @@
                     </div>
                     <p class="text-inherit">12</p>
                   </button>
-                  <!-- 싫어요 버튼 -->
                   <button class="flex items-center gap-2">
                     <div class="text-inherit" data-icon="ThumbsDown" data-size="20px" data-weight="regular">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
@@ -219,23 +195,166 @@
                   </button>
                 </div>
               </div>
-              <!-- (후기 카드 2, 3도 동일하게 세부 주석 추가) -->
-              <!-- ... 생략 ... -->
+              <div class="flex flex-col gap-3 bg-neutral-50">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCiXILet-uH1y3HrKD5y3AZmb2awpHeipVuk3Pnzduaht02G5EcauLlDXBcz7MusFVBpe2eOSBRUpf7fzkrZohxLcfbt9yE76fwi8qxLX-Ic2sqGjP162QtZA7hDvsHetgSSy0AT_Lf_5Rskgqv2iV_n6a4-GVwkHllECFNgfjp5excPit0WudhzhucLgYacFX0-e7DFUI5a1etuDDCaaDfyKDSOk3r1sWRkSFd4vBW677_KjL0M0BOqC5-7DpfvWN7OUIJ7-cFptw");'
+                  ></div>
+                  <div class="flex-1">
+                    <p class="text-[#141414] text-base font-medium leading-normal">Ethan</p>
+                    <p class="text-neutral-500 text-sm font-normal leading-normal">June 22, 2023</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5">
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-[#141414] text-base font-normal leading-normal">
+                  The hands-on approach and expert guidance made this class unforgettable. I now feel confident in making authentic pizza at home. Thank you!
+                </p>
+                <div class="flex gap-9 text-neutral-500">
+                  <button class="flex items-center gap-2">
+                    <div class="text-inherit" data-icon="ThumbsUp" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                          d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <p class="text-inherit">15</p>
+                  </button>
+                  <button class="flex items-center gap-2">
+                    <div class="text-inherit" data-icon="ThumbsDown" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                          d="M239.82,157l-12-96A24,24,0,0,0,204,40H32A16,16,0,0,0,16,56v88a16,16,0,0,0,16,16H75.06l37.78,75.58A8,8,0,0,0,120,240a40,40,0,0,0,40-40V184h56a24,24,0,0,0,23.82-27ZM72,144H32V56H72Zm150,21.29a7.88,7.88,0,0,1-6,2.71H152a8,8,0,0,0-8,8v24a24,24,0,0,1-19.29,23.54L88,150.11V56H204a8,8,0,0,1,7.94,7l12,96A7.87,7.87,0,0,1,222,165.29Z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 bg-neutral-50">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWTh_296sS-inVnE4l2e23szuEosFMOgFN57mb6KoqbfX7rcUIQFElYy3xrXljCABHPLDR_0xmSFWJAi_2fW2hhZPdR9-kGdmflKBnJ3-W69zzZNvKvPejj-SOg1VqvVyZawcuOi7JzLtQpfoCkJ6ZOROdFpphKueQHciJtFRsLqUMC9vPbz0OiLifiXMbQ-jla1QP1KJVqnbOSl5HTm2V-kIxCAEPhh3-BuU15dqhAt47fvDfNMygzy9MQDghIQNq9Tq-lMZXEKE");'
+                  ></div>
+                  <div class="flex-1">
+                    <p class="text-[#141414] text-base font-medium leading-normal">Olivia</p>
+                    <p class="text-neutral-500 text-sm font-normal leading-normal">July 10, 2023</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5">
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-black" data-icon="Star" data-size="20px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-[#141414] text-base font-normal leading-normal">
+                  From the dough to the toppings, every detail was covered with precision and care. The class was well-organized, and the pizza we made was the best I've ever
+                  tasted.
+                </p>
+                <div class="flex gap-9 text-neutral-500">
+                  <button class="flex items-center gap-2">
+                    <div class="text-inherit" data-icon="ThumbsUp" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                          d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <p class="text-inherit">10</p>
+                  </button>
+                  <button class="flex items-center gap-2">
+                    <div class="text-inherit" data-icon="ThumbsDown" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                          d="M239.82,157l-12-96A24,24,0,0,0,204,40H32A16,16,0,0,0,16,56v88a16,16,0,0,0,16,16H75.06l37.78,75.58A8,8,0,0,0,120,240a40,40,0,0,0,40-40V184h56a24,24,0,0,0,23.82-27ZM72,144H32V56H72Zm150,21.29a7.88,7.88,0,0,1-6,2.71H152a8,8,0,0,0-8,8v24a24,24,0,0,1-19.29,23.54L88,150.11V56H204a8,8,0,0,1,7.94,7l12,96A7.87,7.87,0,0,1,222,165.29Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <p class="text-inherit">2</p>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- 푸터: 정책, 소셜 링크, 저작권 -->
         <footer class="flex justify-center">
           <div class="flex max-w-[960px] flex-1 flex-col">
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
               <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <!-- 개인정보 처리방침, 이용약관, 연락처 링크 -->
                 <a class="text-neutral-500 text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
                 <a class="text-neutral-500 text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
                 <a class="text-neutral-500 text-base font-normal leading-normal min-w-40" href="#">Contact Us</a>
               </div>
               <div class="flex flex-wrap justify-center gap-4">
-                <!-- 트위터, 인스타그램, 페이스북 소셜 아이콘 -->
                 <a href="#">
                   <div class="text-neutral-500" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
@@ -264,7 +383,6 @@
                   </div>
                 </a>
               </div>
-              <!-- 저작권 문구 -->
               <p class="text-neutral-500 text-base font-normal leading-normal">© 2024 Pizza Elite. All rights reserved.</p>
             </footer>
           </div>
