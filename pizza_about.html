@@ -1,0 +1,184 @@
+<!-- 문서의 시작: 이 파일은 Pizza Elite의 소개 페이지입니다. -->
+<html>
+  <head>
+    <!-- 구글 폰트 서버에 미리 연결하여 폰트 로딩 속도 향상 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <!-- Noto Serif, Noto Sans 폰트 비동기 로드 (onload로 렌더블 차단 방지) -->
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Serif%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <!-- 브라우저 탭에 표시될 제목 -->
+    <title>SGEG Hwasung Pizza</title>
+    <!-- 파비콘(아이콘) 설정, 현재는 빈 데이터 -->
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <!-- Tailwind CSS CDN: forms, container-queries 플러그인 포함 -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <!-- 전체 페이지를 감싸는 최상위 div, 배경색/폰트/레이아웃 지정 -->
+    <div class="relative flex size-full min-h-screen flex-col bg-neutral-50 group/design-root overflow-x-hidden" style='font-family: "Noto Serif", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- 헤더: 사이트 로고, 네비게이션, 예약 버튼 포함 -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#ededed] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#141414]">
+            <!-- 로고 SVG: 네모 격자 모양, 브랜드 아이덴티티용 -->
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- 사각형 경로: 로고 심볼 -->
+                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <!-- 사이트명: Pizza Elite, 굵은 글씨 -->
+            <a href="index.html">
+              <h2 class="text-[#141414] text-lg font-bold leading-tight tracking-[-0.015em]">Pizza Elite</h2>
+            </a>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <!-- 네비게이션 메뉴: 각 섹션으로 이동하는 링크 -->
+              <a class="text-[#141414] text-sm font-medium leading-normal" href="pizza_about.html">About</a>
+              <a class="text-[#141414] text-sm font-medium leading-normal" href="pizza_classes.html">Classes</a>
+              <a class="text-[#141414] text-sm font-medium leading-normal" href="pizza_review.html">Reviews</a>
+              <a class="text-[#141414] text-sm font-medium leading-normal" href="pizza_contact.html">Contact</a>
+            </div>
+            <!-- 예약 버튼: Book Now, 둥근 모양/블랙 배경/흰색 글씨 -->
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-black text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Book Now</span> <!-- 긴 텍스트도 한 줄로 표시 -->
+            </button>
+          </div>
+        </header>
+        <!-- 메인 컨텐츠: 소개, 셰프, 철학, 차별점, 이미지 갤러리 -->
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <!-- 소개 타이틀: 큰 글씨, 볼드, 최소 너비 지정 -->
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <a href="index.html">
+                <p class="text-[#141414] tracking-light text-[32px] font-bold leading-tight min-w-72">About Our Neapolitan Pizza Class</p>
+              </a>
+            </div>
+            <!-- 클래스 소개 설명: Pizza Elite의 미션, 셰프, 전통 강조 -->
+            <p class="text-[#141414] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              At Pizza Elite, our mission is to share the authentic art of Neapolitan pizza making. Our yearly class in Naples offers a unique, immersive experience led by Chef
+              Marco Rossi, a renowned pizzaiolo with over 20 years of experience. We believe in hands-on learning, using only the finest ingredients, and preserving the traditional
+              techniques that make Neapolitan pizza a culinary treasure.
+            </p>
+            <!-- 셰프 소개 섹션: 이름, 직함, 경력 설명 -->
+            <h2 class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Meet Chef Marco Rossi</h2>
+            <div class="flex p-4 @container">
+              <div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+                <div class="flex gap-4">
+                  <!-- 셰프 프로필 이미지: 원형, 배경 이미지로 표시, 반응형 -->
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEJM-jpBa1PPw-SyZoFtWm2UhEODOtuTf0Jk1FCG26aPcvybP_edK8zupNQkMz0pQAHOZlgF7-CJeCw18kODWEbsnTrCGsQnu5mueBiz_Rhn9KRps8bQM_-UUrpPpPWm3EUMMPMTWkeN6qwayHy3vMk-q--kBu3ddILrqleIV-fWg3AsC52bF_pYOA6rrDNTDiurO97GeVkBa-avH6rR1N_NacokPh_J9tKdgPIOOQ7CRSB5U5RN7WDB3TVwdkeJvJdDRAiwV9_ZM");'
+                  ></div>
+                  <div class="flex flex-col justify-center">
+                    <!-- 셰프 이름 -->
+                    <p class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em]">Chef Marco Rossi</p>
+                    <!-- 직함 -->
+                    <p class="text-neutral-500 text-base font-normal leading-normal">Master Pizzaiolo</p>
+                    <!-- 경력 및 열정 설명 -->
+                    <p class="text-neutral-500 text-base font-normal leading-normal">
+                      With over 20 years of experience, Chef Rossi is a leading expert in Neapolitan pizza. His passion for traditional methods and quality ingredients shines
+                      through in every class.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 철학 소개: 전통, 도우, 화덕, 토핑 등 핵심 가치 -->
+            <h2 class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Philosophy</h2>
+            <p class="text-[#141414] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Our class is more than just a cooking lesson; it's a journey into the heart of Italian culinary tradition. We focus on the fundamentals: crafting the perfect dough,
+              mastering the wood-fired oven, and selecting the freshest toppings. Our goal is to empower you to recreate the magic of Neapolitan pizza in your own kitchen, sharing
+              this timeless craft with friends and family.
+            </p>
+            <!-- 차별점 소개: 소규모, 셰프의 직접 지도, 문화적 배경 설명 -->
+            <h2 class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">What Makes Us Unique</h2>
+            <p class="text-[#141414] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Our class stands out for its intimate setting, limited to a small group of participants to ensure personalized attention. Chef Rossi's hands-on approach, combined
+              with our focus on authentic techniques and premium ingredients, provides an unparalleled learning experience. You'll not only learn to make pizza but also understand
+              the history and culture behind this iconic dish.
+            </p>
+            <!-- 이미지 갤러리: 3장, 반응형 그리드, 각 div에 이미지 배경 -->
+            <div class="flex w-full grow bg-neutral-50 @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-neutral-50 @[480px]:gap-2 aspect-[3/2] rounded-xl grid grid-cols-[2fr_1fr_1fr]">
+                <!-- 첫 번째 이미지: 세로로 2칸 차지 -->
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none row-span-2"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhB6FjMdI-4LG3zekFgxTELFp8llkiz-eUsUB1IrTrc_mhh_03T2-q2e1A-dR_BQd1Df-bCZypjWlfMZ8f7-9Nrc0UcxuN3kYPtAdR9xlRqHKVfEMv3X21jOx5UFhTMWBIXIxhBxjxiWsb-NUMMwUl39KHMCZ4TmBPPo6h4sIXTLu08ZyYEQrAW2v1uAajANBJ4prGY55tCp3yki55HmKQfMZqYx-U5ZyTQrnTopSCNejZWfUISBS6ZtuvPE9oy77ju2QscMB94TQ");'
+                ></div>
+                <!-- 두 번째 이미지: 가로로 2칸 차지 -->
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none col-span-2"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDEd_18OSib9ftqSyS0XKZq4s_8MUqu2m4moa5hiw3g4isBi-sKL9qVGshBi54IzK0gxHhTmvBI2rw7bDnPKL9QOfyzU39WkKVImXmUgBag5C0yR6lhRTbCpMvswWI1DboEeE-SfTFTQEN8TyqJ5BcaaGmGHMXcgJxqdXNheiBZDFEQaoYGGRfobsfZ3O6PbDPWP4FduHEZL9zQqsX1Qh-80vUfEVsbnV2_I6p7CAFc1L4saifT91z6Rd5HRn-Ryf8eriGjw3QdV0");'
+                ></div>
+                <!-- 세 번째 이미지: 가로로 2칸 차지 -->
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none col-span-2"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwcviRzWVVQ3CuD5Y24b2RxJPHvuGyJ3rHGiUEJPudApSfbSy7eHpJ3OfQgogdicPCgeqP7dzvUT-eVG9pHWoelV_qrhwV-4tp9sTVppaNxnIFO9Nm6y5Oa7t6sQiM6qcGLciAIPihmYkLkwVIz-vgnDrdcWFo3EzOMegi4B41qjNGkOZME9WuagwHYAUhXeGUDRHBC4cazZcg-2yzfLPAo-3QKosr6xt0FCz_lJ9JA7Dv-hc_OA_aD6ROCrxCa7wBs586l4qSH80");'
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 푸터: 사이트 정보, 소셜 아이콘, 저작권 -->
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <!-- 푸터 링크: 개인정보, 이용약관, 연락처 -->
+                <a class="text-neutral-500 text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+                <a class="text-neutral-500 text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+                <a class="text-neutral-500 text-base font-normal leading-normal min-w-40" href="#">Contact Us</a>
+              </div>
+              <div class="flex flex-wrap justify-center gap-4">
+                <!-- 소셜 미디어 아이콘: 트위터, 인스타그램, 페이스북 -->
+                <a href="#">
+                  <div class="text-neutral-500" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+                    <!-- 트위터 아이콘 SVG: 새 모양 -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-neutral-500" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
+                    <!-- 인스타그램 아이콘 SVG: 카메라/원형 -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-neutral-500" data-icon="FacebookLogo" data-size="24px" data-weight="regular">
+                    <!-- 페이스북 아이콘 SVG: F자 원형 -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <!-- 저작권 문구: 연도, 사이트명, All rights reserved. -->
+              <p class="text-neutral-500 text-base font-normal leading-normal">© 2024 Pizza Elite. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- 문서의 끝: Pizza Elite 소개 페이지 종료 -->
